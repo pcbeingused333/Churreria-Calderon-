@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Churrería [Tu Nombre] - Los churros más crujientes y frescos de [Ciudad]. Hechos artesanalmente cada día.">
+  <title>[Nombre Churrería] | Churros Artesanos en [Ciudad]</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
+    
+    :root {
+      --primary: #92400e;   /* Marrón chocolate */
+      --accent: #f59e0b;    /* Naranja dorado */
+    }
+    
+    .tail-container {
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    .heading-font {
+      font-family: 'Playfair Display', sans-serif;
+    }
+
+    .hero-bg {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), 
+                        url('https://picsum.photos/id/1015/2000/1200');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .churro-card {
+      transition: all 0.3s ease;
+    }
+    .churro-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+
+    .nav-link {
+      position: relative;
+    }
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: #f59e0b;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover:after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="tail-container bg-stone-50 text-stone-800">
+
+  <!-- NAVBAR -->
+  <nav class="bg-amber-950 text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <i class="fa-solid fa-bread-slice text-3xl text-amber-400"></i>
+        <h1 class="text-3xl font-bold heading-font">Churreria Calderon</h1>
+      </div>
+      
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center gap-8 text-lg">
+        <a href="#inicio" class="nav-link hover:text-amber-400 transition-colors">Inicio</a>
+        <a href="#nosotros" class="nav-link hover:text-amber-400 transition-colors">Nosotros</a>
+        <a href="#menu" class="nav-link hover:text-amber-400 transition-colors">Menú</a>
+        <a href="#galeria" class="nav-link hover:text-amber-400 transition-colors">Galería</a>
+        <a href="#ubicacion" class="nav-link hover:text-amber-400 transition-colors">Ubicación</a>
+      </div>
+
+      <a href="https://wa.me/34XXXXXXXXX" target="_blank"
+         class="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-full flex items-center gap-2 font-semibold transition-colors">
+        <i class="fa-brands fa-whatsapp text-xl"></i>
+        <span>Order via Whatsapp</span>
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-3xl">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-amber-900 py-4">
+      <div class="flex flex-col px-6 gap-4 text-lg">
+        <a href="#inicio" class="py-2 hover:text-amber-400">Inicio</a>
+        <a href="#nosotros" class="py-2 hover:text-amber-400">Nosotros</a>
+        <a href="#menu" class="py-2 hover:text-amber-400">Menú</a>
+        <a href="#galeria" class="py-2 hover:text-amber-400">Galería</a>
+        <a href="#ubicacion" class="py-2 hover:text-amber-400">Ubicación</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero-bg h-screen flex items-center justify-center text-center text-white">
+    <div class="max-w-4xl px-6">
+      <p class="text-amber-300 text-lg tracking-widest mb-4">Desde [Año] • Artesanal</p>
+      <h2 class="text-6xl md:text-7xl font-bold heading-font leading-tight mb-6">
+        Los churros más crujientes<br>de <span class="text-amber-400">Toronto</span>
+      </h2>
+      <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto">
+        Churros recién hechos, chocolate espeso y mucho cariño en cada porción.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-5 justify-center">
+        <a href="#menu" 
+           class="bg-amber-500 hover:bg-amber-600 text-white px-10 py-5 rounded-2xl text-xl font-semibold flex items-center justify-center gap-3 transition-all">
+          Ver nuestro menú
+        </a>
+        <a href="https://wa.me/34XXXXXXXXX" target="_blank"
+           class="border-2 border-white hover:bg-white hover:text-amber-950 px-10 py-5 rounded-2xl text-xl font-semibold flex items-center justify-center gap-3 transition-all">
+          <i class="fa-brands fa-whatsapp"></i> Pedir ahora
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section id="nosotros" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-5xl font-bold heading-font mb-6">Nuestra historia</h2>
+        <p class="text-lg leading-relaxed text-stone-600 mb-6">
+          Desde [año] llevamos el aroma de los churros recién hechos a las calles de [Ciudad]. 
+          Nuestra receta familiar se ha transmitido de generación en generación, 
+          usando solo ingredientes de primera calidad: harina seleccionada, aceite de girasol y mucho amor.
+        </p>
+        <p class="text-lg leading-relaxed text-stone-600">
+          Cada mañana preparamos los churros a mano para que lleguen crujientes y calientes a tu mesa.
+        </p>
+        <div class="mt-10 flex gap-8">
+          <div>
+            <p class="text-4xl font-bold text-amber-600">10k+</p>
+            <p class="text-sm text-stone-500">Churros diarios</p>
+          </div>
+          <div>
+            <p class="text-4xl font-bold text-amber-600">8</p>
+            <p class="text-sm text-stone-500">Años de tradición</p>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-3xl overflow-hidden shadow-2xl">
+        <img src="https://picsum.photos/id/870/800/600" alt="Interior de la churrería" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- MENÚ -->
+  <section id="menu" class="py-20 bg-amber-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-5xl font-bold heading-font mb-4">Nuestro Menú</h2>
+        <p class="text-xl text-stone-600">Precios actualizados • Mayo 2026</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Ejemplo de tarjeta -->
+        <div class="churro-card bg-white rounded-3xl overflow-hidden shadow-lg">
+          <img src="https://picsum.photos/id/201/600/400" alt="Churros clásicos" class="w-full h-56 object-cover">
+          <div class="p-6">
+            <div class="flex justify-between items-start">
+              <h3 class="text-2xl font-semibold">Churros Clásicos</h3>
+              <span class="text-2xl font-bold text-amber-600">2,50€</span>
+            </div>
+            <p class="text-stone-500 mt-2">Porción de 6 unidades recién fritas</p>
+          </div>
+        </div>
+
+        <div class="churro-card bg-white
