@@ -16,9 +16,11 @@
     .heading-font { font-family: 'Playfair Display', sans-serif; }
 
     .hero-bg {
-      background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://picsum.photos/id/1015/2000/1200');
+      background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('hero.jpg');
       background-size: cover;
       background-position: center;
+      min-height: 100vh;
+      background-attachment: fixed;
     }
 
     .churro-card {
@@ -32,127 +34,267 @@
 </head>
 <body class="tail-container bg-stone-50 text-stone-800">
 
-  <!-- NAVBAR -->
-  <nav class="bg-amber-950 text-white sticky top-0 z-50 shadow-lg">
-    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-      <div class="flex items-center gap-3">
-        <i class="fa-solid fa-bread-slice text-3xl text-amber-400"></i>
-        <h1 class="text-3xl font-bold heading-font">Churrería Calderón</h1>
+<!-- NAVBAR -->
+<nav class="bg-amber-950 text-white sticky top-0 z-50 shadow-lg">
+  <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+    <div class="flex items-center">
+      <img src="logo.png" alt="Churrería Calderón" class="h-14 w-auto">
+    </div>
+    
+    <div class="hidden md:flex items-center gap-8 text-lg">
+      <a href="#menu" class="hover:text-amber-400 transition-colors">Menu</a>
+      <a href="#story" class="hover:text-amber-400 transition-colors">Our Story</a>
+      <a href="#gallery" class="hover:text-amber-400 transition-colors">Gallery</a>
+      <a href="#location" class="hover:text-amber-400 transition-colors">Location</a>
+      <a href="#contact" class="hover:text-amber-400 transition-colors">Contact</a>
+    </div>
+
+    <a href="https://wa.me/16477208665" target="_blank"
+       class="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-full flex items-center gap-2 font-semibold transition-colors">
+      <i class="fa-brands fa-whatsapp text-xl"></i>
+      Order on WhatsApp
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="inicio" class="hero-bg h-screen flex items-center justify-center text-center text-white">
+  <div class="max-w-4xl px-6">
+    <p class="text-amber-300 text-lg tracking-widest mb-4">Since 2026 • Toronto</p>
+    <h2 class="text-6xl md:text-7xl font-bold heading-font leading-tight mb-6">
+      The crispiest churros in<br><span class="text-amber-400">Toronto</span>
+    </h2>
+    <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto">
+      Freshly made churros, thick hot chocolate, and lots of love in every bite.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-5 justify-center">
+      <a href="#menu" class="bg-amber-500 hover:bg-amber-600 text-white px-10 py-5 rounded-2xl text-xl font-semibold">See Menu</a>
+      <a href="https://wa.me/16477208665" target="_blank" 
+         class="border-2 border-white hover:bg-white hover:text-amber-950 px-10 py-5 rounded-2xl text-xl font-semibold flex items-center justify-center gap-3">
+        <i class="fa-brands fa-whatsapp"></i> Order Now
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- OUR STORY -->
+<section id="story" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <h2 class="text-5xl font-bold heading-font mb-6">Our Story</h2>
+      <p class="text-lg leading-relaxed text-stone-600 mb-6">
+        Since 2026, Churrería Calderón has been bringing the authentic taste of Spain to the streets of Toronto. 
+        Our family recipe has been passed down for generations, using only premium ingredients.
+      </p>
+      <p class="text-lg leading-relaxed text-stone-600 mb-6">
+        All our methods come from the Catalan region of Spain, where it all started in a foodtruck around 2012. 
+        We were fortunate enough to learn from one of the best churreros in all of Spain.
+      </p>
+      <p class="text-lg leading-relaxed text-stone-600">
+        Every morning we hand-make our churros so they arrive crispy, hot and full of flavor.
+      </p>
+    </div>
+    <div class="rounded-3xl overflow-hidden shadow-2xl">
+      <img src="story.jpg" alt="Churrería Calderón interior" class="w-full h-full object-cover">
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu" class="py-20 bg-amber-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-bold heading-font mb-4">Our Menu</h2>
+      <p class="text-xl text-stone-600">Fresh daily • Prices in CAD</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <!-- Classic Churros -->
+      <div class="churro-card bg-white rounded-3xl overflow-hidden shadow-lg">
+        <div class="aspect-video overflow-hidden">
+          <img src="churro_classic.jpg" alt="Classic Churros" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+        </div>
+        <div class="p-7">
+          <div class="flex justify-between items-baseline mb-3">
+            <h3 class="text-2xl font-semibold">Classic Churros</h3>
+            <span class="text-3xl font-bold text-amber-600">$8.95</span>
+          </div>
+          <p class="text-stone-600 mb-6">Crispy and coated in sugar &amp;/or cinnamon</p>
+          <div class="space-y-2 text-sm">
+            <div class="flex justify-between"><span>6 pieces</span><span class="font-medium">$8.95</span></div>
+            <div class="flex justify-between"><span>12 pieces</span><span class="font-medium">$16.50 <span class="text-emerald-600 font-medium">• Save $1.40</span></span></div>
+            <div class="flex justify-between"><span>24 pieces</span><span class="font-medium">$32.00 <span class="text-emerald-600 font-medium">• Save $3.80</span></span></div>
+            <div class="flex justify-between"><span>36 pieces</span><span class="font-medium">$47.50 <span class="text-emerald-600 font-medium">• Save $6.20</span></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Artisanal Filled Churros -->
+      <div class="churro-card bg-white rounded-3xl overflow-hidden shadow-lg">
+        <div class="aspect-video overflow-hidden">
+          <img src="filled_churro.jpg" alt="Filled Churros" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+        </div>
+        <div class="p-7">
+          <div class="flex justify-between items-baseline mb-4">
+            <h3 class="text-2xl font-semibold">Artisanal Filled Churros</h3>
+            <span class="text-3xl font-bold text-amber-600">$8.75</span>
+          </div>
+          <p class="text-stone-600 mb-6">Crispy outside, creamy inside • Made fresh daily</p>
+          <div class="space-y-4">
+            <div>
+              <div class="flex items-center gap-2 mb-2"><span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-semibold rounded-full">CLASSIC</span></div>
+              <div class="flex justify-between text-sm"><span>Dulce de Leche / Pastry Cream</span><span class="font-medium">$8.75 each</span></div>
+            </div>
+            <div>
+              <div class="flex items-center gap-2 mb-2"><span class="px-3 py-1 bg-rose-100 text-rose-700 text-xs font-semibold rounded-full">PREMIUM</span></div>
+              <div class="flex justify-between text-sm"><span>Nutella / White Chocolate / Cream Cheese Maple</span><span class="font-medium">$10.00 each</span></div>
+            </div>
+            <div>
+              <div class="flex items-center gap-2 mb-2"><span class="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-semibold rounded-full">LUXURY</span></div>
+              <div class="flex justify-between text-sm"><span>Pistachio</span><span class="font-medium">$12.50 each</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thick Hot Chocolate -->
+      <div class="churro-card bg-white rounded-3xl overflow-hidden shadow-lg">
+        <div class="aspect-video overflow-hidden">
+          <img src="hot_chocolate.jpg" alt="Thick Hot Chocolate" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+        </div>
+        <div class="p-7">
+          <div class="flex justify-between items-baseline mb-3">
+            <h3 class="text-2xl font-semibold">Thick Hot Chocolate</h3>
+            <span class="text-3xl font-bold text-amber-600">$6.50</span>
+          </div>
+          <p class="text-stone-600 mb-6">Spanish style - rich and very thick</p>
+          <div class="space-y-3 text-sm">
+            <div class="flex justify-between items-center"><span>Small (8oz)</span><span class="font-medium">$6.50</span></div>
+            <div class="flex justify-between items-center"><span>Large (12oz)</span><span class="font-medium">$9.75 <span class="text-emerald-600 text-xs font-medium">• Save $1.00</span></span></div>
+            <div class="flex justify-between items-center"><span>Extra Large (16oz)</span><span class="font-medium">$13.00 <span class="text-emerald-600 text-xs font-medium">• Save $2.00</span></span></div>
+            <div class="flex justify-between items-center"><span>Mega (20oz)</span><span class="font-medium">$16.25 <span class="text-emerald-600 text-xs font-medium">• Save $3.00</span></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="https://wa.me/16477208665" target="_blank"
+         class="inline-flex items-center gap-3 bg-green-600 text-white px-10 py-5 rounded-2xl text-xl font-medium hover:bg-green-700 transition">
+        <i class="fa-brands fa-whatsapp"></i>
+        See full menu &amp; order on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-5xl font-bold heading-font mb-4">Gallery</h2>
+    <p class="text-xl text-stone-600 mb-10">See more fresh churros and moments</p>
+    
+    <div class="flex flex-col sm:flex-row gap-6 justify-center">
+      <a href="https://www.instagram.com/churreriacalderon/" target="_blank"
+         class="inline-flex items-center gap-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white px-10 py-5 rounded-2xl font-medium text-lg hover:scale-105 transition">
+        <i class="fa-brands fa-instagram text-3xl"></i>
+        <span>Instagram @churreriacalderon</span>
+      </a>
+      
+      <a href="https://www.tiktok.com/@churreriacalderon" target="_blank"
+         class="inline-flex items-center gap-3 bg-black text-white px-10 py-5 rounded-2xl font-medium text-lg hover:scale-105 transition">
+        <i class="fa-brands fa-tiktok text-3xl"></i>
+        <span>TikTok @churreriacalderon</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section id="location" class="py-20 bg-amber-950 text-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-12">
+      <div>
+        <h2 class="text-5xl font-bold heading-font mb-8">Visit Us</h2>
+        <div class="space-y-6 text-lg">
+          <div>
+            <p class="text-amber-400 font-semibold">Address</p>
+            <p>181 Baldwin Street Unit B<br>Toronto, ON M5T 1L9</p>
+          </div>
+          <div>
+            <p class="text-amber-400 font-semibold">Hours</p>
+            <p>Tuesday - Sunday: 9:00 AM - 10:00 PM</p>
+          </div>
+        </div>
       </div>
       
-      <div class="hidden md:flex items-center gap-8 text-lg">
-        <a href="#menu" class="hover:text-amber-400 transition-colors">Menu</a>
-        <a href="#story" class="hover:text-amber-400 transition-colors">Our Story</a>
-        <a href="#gallery" class="hover:text-amber-400 transition-colors">Gallery</a>
-        <a href="#location" class="hover:text-amber-400 transition-colors">Location</a>
+      <!-- Mapa corregido y simple -->
+      <div class="rounded-3xl overflow-hidden shadow-2xl h-96">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.5!2d-79.4028!3d43.6554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34c8f8f8f8f8%3A0x0!2s181+Baldwin+St+Unit+B%2C+Toronto%2C+ON+M5T+1L9!5e0!3m2!1sen!2sca!4v1747200000000" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
       </div>
+    </div>
+  </div>
+</section>
 
+<!-- ORDERS & MORE INFORMATION -->
+<section id="contact" class="py-24 bg-gradient-to-br from-amber-950 to-amber-900 text-white">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-5xl font-bold heading-font mb-6">Orders & More Information</h2>
+    <p class="text-xl text-amber-200 mb-12 max-w-2xl mx-auto">
+      Have questions? Want to place a special order or catering?<br>
+      We're just a message away!
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-6 max-w-lg mx-auto">
+      <!-- Email Card -->
+      <a href="mailto:info@churreriacalderon.com" 
+         class="group bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 rounded-3xl p-8 transition-all">
+        <div class="w-16 h-16 mx-auto mb-5 bg-amber-200 rounded-2xl flex items-center justify-center">
+          <i class="fa-solid fa-envelope text-3xl text-amber-950"></i>
+        </div>
+        <p class="text-lg font-medium mb-2">Email us</p>
+        <p class="text-amber-300 text-base break-all">info@churreriacalderon.com</p>
+      </a>
+
+      <!-- WhatsApp Card -->
       <a href="https://wa.me/16477208665" target="_blank"
-      class="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-full flex items-center gap-2 font-semibold transition-colors">
-     <i class="fa-brands fa-whatsapp text-xl"></i>
-     Order on WhatsApp
-   </a>    </div>
-  </nav>
-
-  <!-- HERO -->
-  <section id="inicio" class="hero-bg h-screen flex items-center justify-center text-center text-white">
-    <div class="max-w-4xl px-6">
-      <p class="text-amber-300 text-lg tracking-widest mb-4">Since 2025 • Toronto</p>
-      <h2 class="text-6xl md:text-7xl font-bold heading-font leading-tight mb-6">
-        The crispiest churros in<br><span class="text-amber-400">Toronto</span>
-      </h2>
-      <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto">
-        Freshly made churros, thick hot chocolate, and lots of love in every bite.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-5 justify-center">
-        <a href="#menu" class="bg-amber-500 hover:bg-amber-600 text-white px-10 py-5 rounded-2xl text-xl font-semibold">See Menu</a>
-        <a href="https://wa.me/6477208665" target="_blank" class="border-2 border-white hover:bg-white hover:text-amber-950 px-10 py-5 rounded-2xl text-xl font-semibold flex items-center justify-center gap-3">
-          <i class="fa-brands fa-whatsapp"></i> Order Now
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- OUR STORY -->
-  <section id="story" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-      <div>
-        <h2 class="text-5xl font-bold heading-font mb-6">Our Story</h2>
-        <p class="text-lg leading-relaxed text-stone-600 mb-6">
-          Since 2025, Churrería Calderón has been bringing the authentic taste of Spain to the streets of Toronto. 
-          Our recipe has been passed down for generations, using only premium ingredients.
-        </p>
-        <p class="text-lg leading-relaxed text-stone-600">
-          Every morning we hand-make our churros so they get to you crispy, hot and sweet.
-        </p>
-      </div>
-      <div class="rounded-3xl overflow-hidden shadow-2xl">
-        <img src="https://picsum.photos/id/870/800/600" alt="Churrería Calderón interior" class="w-full h-full object-cover">
-      </div>
-    </div>
-  </section>
-
-  <!-- MENU -->
-  <section id="menu" class="py-20 bg-amber-50">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center mb-16">
-        <h2 class="text-5xl font-bold heading-font mb-4">Our Menu</h2>
-        <p class="text-xl text-stone-600">Prices updated • May 2026</p>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="churro-card bg-white rounded-3xl overflow-hidden shadow-lg">
-          <img src="https://picsum.photos/id/201/600/400" alt="Classic Churros" class="w-full h-56 object-cover">
-          <div class="p-6">
-            <div class="flex justify-between">
-              <h3 class="text-2xl font-semibold">Classic Churros</h3>
-              <span class="text-2xl font-bold text-amber-600">$4.50</span>
-            </div>
-            <p class="text-stone-500">6 pieces freshly fried</p>
-          </div>
+         class="group bg-green-600 hover:bg-green-700 rounded-3xl p-8 transition-all">
+        <div class="w-16 h-16 mx-auto mb-5 bg-white/20 rounded-2xl flex items-center justify-center">
+          <i class="fa-brands fa-whatsapp text-4xl"></i>
         </div>
-
-        <div class="churro-card bg-white rounded-3xl overflow-hidden shadow-lg">
-          <img src="https://picsum.photos/id/292/600/400" alt="Chocolate Filled" class="w-full h-56 object-cover">
-          <div class="p-6">
-            <div class="flex justify-between">
-              <h3 class="text-2xl font-semibold">Chocolate Filled Churros</h3>
-              <span class="text-2xl font-bold text-amber-600">$6.50</span>
-            </div>
-            <p class="text-stone-500">Filled with Belgian chocolate</p>
-          </div>
-        </div>
-
-        <div class="churro-card bg-white rounded-3xl overflow-hidden shadow-lg">
-          <img src="https://picsum.photos/id/431/600/400" alt="Hot Chocolate" class="w-full h-56 object-cover">
-          <div class="p-6">
-            <div class="flex justify-between">
-              <h3 class="text-2xl font-semibold">Thick Hot Chocolate</h3>
-              <span class="text-2xl font-bold text-amber-600">$5.00</span>
-            </div>
-            <p class="text-stone-500">Spanish style</p>
-          </div>
-        </div>
-      </div>
+        <p class="text-lg font-medium mb-2">WhatsApp us</p>
+        <p class="text-xl">(647) 720-8665</p>
+      </a>
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-stone-900 text-stone-400 py-12">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <p class="text-2xl heading-font text-white mb-4">Churrería Calderón</p>
-      <p>© 2026 All rights reserved • Made with ❤️ and churros in Toronto</p>
-    </div>
-  </footer>
+    <p class="mt-12 text-amber-300 text-sm">
+      We usually reply within a few minutes during business hours
+    </p>
+  </div>
+</section>
 
-  <script>
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-      });
+<!-- FOOTER -->
+<footer class="bg-stone-900 text-stone-400 py-12">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <p class="text-2xl heading-font text-white mb-4">Churrería Calderón</p>
+    <p>© 2026 All rights reserved • Made with ❤️ and churros in Toronto</p>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
     });
-  </script>
+  });
+</script>
 </body>
 </html>
